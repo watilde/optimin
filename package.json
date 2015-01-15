@@ -1,0 +1,19 @@
+{
+  "name": "optimin",
+  "version": "0.0.1",
+  "description": "A Library for parsing option and building cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watilde/optimin.git"
+  },
+  "author": "Daijiro Wachi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watilde/optimin/issues"
+  },
+  "homepage": "https://github.com/watilde/optimin"
+}
