@@ -1,6 +1,6 @@
 {
   "name": "optimin",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A Library for parsing option and building cli",
   "main": "index.js",
   "scripts": {
