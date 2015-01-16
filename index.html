@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Optimin by watilde</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Optimin</h1>
+        <p>A Library for parsing option and building cli</p>
+
+        <p class="view"><a href="https://github.com/watilde/optimin">View the Project on GitHub <small>watilde/optimin</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/watilde/optimin/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/watilde/optimin/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/watilde/optimin">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="optimin" class="anchor" href="#optimin" aria-hidden="true"><span class="octicon octicon-link"></span></a>optimin</h1>
+
+<p>A Library for parsing option and building cli</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p>with npm</p>
+
+<pre><code>$ npm install --save optmin
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>index.js</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> argv <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>optmin<span class="pl-pds">'</span></span>)(<span class="pl-sv">process</span>.argv.<span class="pl-s3">slice</span>(<span class="pl-c1">2</span>), {
+  aaa<span class="pl-k">:</span> {
+    alias<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>,
+    boolean<span class="pl-k">:</span> <span class="pl-c1">true</span>
+  },
+  bbb<span class="pl-k">:</span> {
+    alias<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>,
+    <span class="pl-k">default</span><span class="pl-k">:</span> <span class="pl-c1">123</span>
+  },
+  ccc<span class="pl-k">:</span> {
+    alias<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>
+  },
+  ddd<span class="pl-k">:</span> {
+    alias<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>d<span class="pl-pds">'</span></span>
+  },
+  eee<span class="pl-k">:</span> {
+    alias<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>e<span class="pl-pds">'</span></span>,
+    typeof<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>number<span class="pl-pds">'</span></span>
+  }
+});
+<span class="pl-en">console</span><span class="pl-s3">.log</span>(argv);</pre></div>
+
+<p>then</p>
+
+<pre><code>$ node index.js -a -c hello --ddd world --eee 123
+{ aaa: true, bbb: 123, ccc: 'hello', ddd: 'world', eee: 123 }
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/watilde">watilde</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-35821550-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
