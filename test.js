@@ -15,7 +15,6 @@ var argv = require('./')(command.slice(2), {
     alias: 'd'
   },
   eee: {
-    alias: 'e',
     typeof: 'number'
   }
 });

@@ -13,7 +13,7 @@ module.exports = function (argv, opt) {
   });
 
   short_list.forEach(function (index) {
-    var short = argv[index].match(/^-[A-Z]/i)[0];
+    var short = argv[index];
     Object.keys(opt).forEach(function (key) {
       if (!opt[key]) return;
       if (short.indexOf('-' + opt[key].alias) === -1) {
@@ -29,10 +29,10 @@ module.exports = function (argv, opt) {
   });
 
   long_list.forEach(function (index) {
-    var long = argv[index].match(/^--[A-Z]/i)[0];
+    var long = argv[index];
     Object.keys(opt).forEach(function (key) {
       if (!opt[key]) return;
-      if (long.indexOf('--' + opt[key].alias) === -1) {
+      if (long.indexOf('--' + key) === -1) {
         return;
       }
       if (opt[key].boolean === true) {
