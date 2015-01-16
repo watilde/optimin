@@ -25,10 +25,8 @@ var argv = require('optmin')(process.argv.slice(2), {
     alias: 'c'
   },
   ddd: {
-    alias: 'd'
   },
   eee: {
-    alias: 'e',
     typeof: 'number'
   }
 });
