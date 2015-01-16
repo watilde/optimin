@@ -20,8 +20,6 @@ var argv = require('./')(command.slice(2), {
   }
 });
 
-console.log(argv);
-
 if (argv.aaa !== true) throw new Error();
 if (argv.bbb !== 123) throw new Error();
 if (argv.ccc !== 'hello') throw new Error();
