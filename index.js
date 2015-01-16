@@ -1,16 +1,6 @@
-function matchAll(arr, regexp) {
-  var index = [];
-  arr.forEach(function (val, i) {
-    if (val.match(regexp) !== null) index.push(i);
-  });
-  return index;
-}
-
-function each(list, iteratee) {
-  Object.keys(list).forEach(function (key) {
-    iteratee(list[key], key);
-  });
-}
+var matchAll = require('./lib/matchAll');
+var sortObject = require('./lib/sortObject');
+var each = require('./lib/each');
 
 module.exports = function (argv, opt) {
   var out = {};
@@ -34,6 +24,7 @@ module.exports = function (argv, opt) {
         return;
       }
       out[key] = argv[index + 1];
+      if (opt[key].typeof === 'number') out[key] = Number(out[key]);
     });
   });
 
@@ -49,7 +40,10 @@ module.exports = function (argv, opt) {
         return;
       }
       out[key] = argv[index + 1];
+      if (opt[key].typeof === 'number') out[key] = Number(out[key]);
     });
   });
+  out = sortObject(out);
+
   return out;
 };

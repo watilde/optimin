@@ -26,6 +26,10 @@ var argv = require('optmin')(process.argv.slice(2), {
   },
   ddd: {
     alias: 'd'
+  },
+  eee: {
+    alias: 'e',
+    typeof: 'number'
   }
 });
 console.log(argv);
@@ -33,6 +37,6 @@ console.log(argv);
 
 then
 ```
-$ node index.js
-{ bbb: 123, aaa: true, ccc: 'hello', ddd: 'world' }
+$ node index.js -a -c hello --ddd world --eee 123
+{ aaa: true, bbb: 123, ccc: 'hello', ddd: 'world', eee: 123 }
 ```
