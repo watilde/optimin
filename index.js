@@ -51,8 +51,18 @@ module.exports = function (argv, opt) {
       if (opt[key].typeof === 'number') out[key] = Number(out[key]);
     });
   });
+  argv.forEach(function (item, i) {
+    if (item.match(/^-[A-Z]/i) === null &&
+      item.match(/^--[A-Z]/i) === null)
+    {
+      return;
+    }
+    if (typeof out.__ !== 'array') out.__ = [];
+    out.__.push(item);
+    delete argv[i];
+  });
   argv = compat(argv);
-  out = marge(out, {'_': argv})
+  if (argv.length > 0) out = marge(out, {'_': argv})
   out = sortObject(out);
 
   return out;
