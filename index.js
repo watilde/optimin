@@ -57,7 +57,7 @@ module.exports = function (argv, opt) {
     {
       return;
     }
-    if (typeof out.__ !== 'array') out.__ = [];
+    if (typeof out.__ !== 'object') out.__ = [];
     out.__.push(item);
     delete argv[i];
   });

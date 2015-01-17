@@ -35,8 +35,9 @@ console.log(argv);
 
 then
 ```
-$ node index.js -a -c hello --ddd world --eee 123 foo bar baz
+$ node index.js -a -c hello --ddd world --eee 123 foo bar baz --hoge --fuga
 { _: [ 'foo', 'bar', 'baz' ],
+  __: ['--hoge', '--hoge', --fuga']
   aaa: true,
   bbb: 123,
   ccc: 'hello',
