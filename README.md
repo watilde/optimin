@@ -6,13 +6,13 @@ A Library for parsing option and building cli
 ## Install
 with npm
 ```
-$ npm install --save optmin
+$ npm install --save optimin
 ```
 
 ## Usage
 index.js
 ```js
-var argv = require('optmin')(process.argv.slice(2), {
+var argv = require('optimin')(process.argv.slice(2), {
   aaa: {
     alias: 'a',
     boolean: true
